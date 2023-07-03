@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		59A73ACE2A53682900E1A637 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A73ACD2A53682900E1A637 /* AppDelegate.swift */; };
 		59A73AD02A53682900E1A637 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A73ACF2A53682900E1A637 /* SceneDelegate.swift */; };
-		59A73AD22A53682900E1A637 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A73AD12A53682900E1A637 /* ViewController.swift */; };
+		59A73AD22A53682900E1A637 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A73AD12A53682900E1A637 /* SearchVC.swift */; };
 		59A73AD52A53682900E1A637 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59A73AD32A53682900E1A637 /* Main.storyboard */; };
 		59A73AD72A53682B00E1A637 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59A73AD62A53682B00E1A637 /* Assets.xcassets */; };
 		59A73ADA2A53682B00E1A637 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59A73AD82A53682B00E1A637 /* LaunchScreen.storyboard */; };
 		59A73AE52A53682B00E1A637 /* NasaWorkdayAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A73AE42A53682B00E1A637 /* NasaWorkdayAppTests.swift */; };
 		59A73AEF2A53682B00E1A637 /* NasaWorkdayAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A73AEE2A53682B00E1A637 /* NasaWorkdayAppUITests.swift */; };
 		59A73AF12A53682B00E1A637 /* NasaWorkdayAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A73AF02A53682B00E1A637 /* NasaWorkdayAppUITestsLaunchTests.swift */; };
+		59A73B042A53881300E1A637 /* MenubarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A73B032A53881300E1A637 /* MenubarCell.swift */; };
 		59CB5C45CEBC4A575B7B3AE3 /* Pods_NasaWorkdayApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A53574FA317AE9F54290CB63 /* Pods_NasaWorkdayApp.framework */; };
 		9115F75E16044EF6750CBBAE /* Pods_NasaWorkdayAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9D16CFFD662721BC1F6BCD /* Pods_NasaWorkdayAppTests.framework */; };
 		B9BDF46DD68B33FB2549B127 /* Pods_NasaWorkdayApp_NasaWorkdayAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D735F6E27B2B1A06A9BE8E9C /* Pods_NasaWorkdayApp_NasaWorkdayAppUITests.framework */; };
@@ -45,7 +46,7 @@
 		59A73ACA2A53682900E1A637 /* NasaWorkdayApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NasaWorkdayApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59A73ACD2A53682900E1A637 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59A73ACF2A53682900E1A637 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		59A73AD12A53682900E1A637 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		59A73AD12A53682900E1A637 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		59A73AD42A53682900E1A637 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		59A73AD62A53682B00E1A637 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59A73AD92A53682B00E1A637 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +56,7 @@
 		59A73AEA2A53682B00E1A637 /* NasaWorkdayAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NasaWorkdayAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59A73AEE2A53682B00E1A637 /* NasaWorkdayAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaWorkdayAppUITests.swift; sourceTree = "<group>"; };
 		59A73AF02A53682B00E1A637 /* NasaWorkdayAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaWorkdayAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		59A73B032A53881300E1A637 /* MenubarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenubarCell.swift; sourceTree = "<group>"; };
 		6FFFEEE29CBF25AEA1061159 /* Pods-NasaWorkdayAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NasaWorkdayAppTests.debug.xcconfig"; path = "Target Support Files/Pods-NasaWorkdayAppTests/Pods-NasaWorkdayAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		85467A6A4B56F6AA2E2431B9 /* Pods-NasaWorkdayAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NasaWorkdayAppTests.release.xcconfig"; path = "Target Support Files/Pods-NasaWorkdayAppTests/Pods-NasaWorkdayAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		A53574FA317AE9F54290CB63 /* Pods_NasaWorkdayApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NasaWorkdayApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,10 +143,12 @@
 			children = (
 				59A73ACD2A53682900E1A637 /* AppDelegate.swift */,
 				59A73ACF2A53682900E1A637 /* SceneDelegate.swift */,
-				59A73AD12A53682900E1A637 /* ViewController.swift */,
-				59A73AD32A53682900E1A637 /* Main.storyboard */,
-				59A73AD62A53682B00E1A637 /* Assets.xcassets */,
-				59A73AD82A53682B00E1A637 /* LaunchScreen.storyboard */,
+				59A73AFD2A53712200E1A637 /* Model */,
+				59A73AFE2A53712900E1A637 /* Data */,
+				59A73AFF2A53713200E1A637 /* Views */,
+				59A73B002A53713B00E1A637 /* Controllers */,
+				59A73B012A53714200E1A637 /* Storyboard */,
+				59A73B022A53720900E1A637 /* Resources */,
 				59A73ADB2A53682B00E1A637 /* Info.plist */,
 			);
 			path = NasaWorkdayApp;
@@ -165,6 +169,53 @@
 				59A73AF02A53682B00E1A637 /* NasaWorkdayAppUITestsLaunchTests.swift */,
 			);
 			path = NasaWorkdayAppUITests;
+			sourceTree = "<group>";
+		};
+		59A73AFD2A53712200E1A637 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		59A73AFE2A53712900E1A637 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		59A73AFF2A53713200E1A637 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				59A73B032A53881300E1A637 /* MenubarCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		59A73B002A53713B00E1A637 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				59A73AD12A53682900E1A637 /* SearchVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		59A73B012A53714200E1A637 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				59A73AD32A53682900E1A637 /* Main.storyboard */,
+				59A73AD82A53682B00E1A637 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		59A73B022A53720900E1A637 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				59A73AD62A53682B00E1A637 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,8 +457,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59A73AD22A53682900E1A637 /* ViewController.swift in Sources */,
+				59A73AD22A53682900E1A637 /* SearchVC.swift in Sources */,
 				59A73ACE2A53682900E1A637 /* AppDelegate.swift in Sources */,
+				59A73B042A53881300E1A637 /* MenubarCell.swift in Sources */,
 				59A73AD02A53682900E1A637 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
