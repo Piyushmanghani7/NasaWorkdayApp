@@ -1,0 +1,6 @@
+framework module Pods_NasaWorkdayAppTests {
+  umbrella header "Pods-NasaWorkdayAppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
