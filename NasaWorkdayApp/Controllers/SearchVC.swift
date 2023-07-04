@@ -39,7 +39,6 @@ class SearchVC: UIViewController, UISearchBarDelegate {
         
         
         // calling RestAPI class function to fetch the data using searchbar value as parameter.
-    
         RestAPI.sharedService.SearchFetch(SearchName: searchText, Page: initialpage){ (item_updates, error) in
             
             DispatchQueue.main.async {
@@ -100,7 +99,7 @@ extension SearchVC : UITableViewDelegate, UITableViewDataSource
     //API pagination.
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
     {
-        
+        print(indexPath.row)
         
     }
 }
