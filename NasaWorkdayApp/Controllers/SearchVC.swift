@@ -6,15 +6,27 @@
 //
 
 import UIKit
-
+import JGProgressHUD
 class SearchVC: UIViewController, UISearchBarDelegate {
 
+    @IBOutlet weak var search_bar: UISearchBar!
+    
+    @IBOutlet weak var tableview: UITableView!
+    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
+        search_bar.delegate = self
         
     }
 
 
+    // calling when search button click on keyboard to hide keyboard.
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
+    {
+            searchBar.resignFirstResponder()
+    }
+   
 }
 
 extension SearchVC : UITableViewDelegate, UITableViewDataSource

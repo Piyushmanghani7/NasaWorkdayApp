@@ -104,6 +104,10 @@
                             <constraint firstItem="uOG-x7-cGM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ShR-Tu-Buo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="search_bar" destination="48Z-qi-YkS" id="oYR-UO-JV1"/>
+                        <outlet property="tableview" destination="uOG-x7-cGM" id="DT8-Dk-h0b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -17,6 +17,8 @@
 		59A73AEF2A53682B00E1A637 /* NasaWorkdayAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A73AEE2A53682B00E1A637 /* NasaWorkdayAppUITests.swift */; };
 		59A73AF12A53682B00E1A637 /* NasaWorkdayAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A73AF02A53682B00E1A637 /* NasaWorkdayAppUITestsLaunchTests.swift */; };
 		59A73B042A53881300E1A637 /* MenubarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A73B032A53881300E1A637 /* MenubarCell.swift */; };
+		59A73B062A538B6F00E1A637 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A73B052A538B6F00E1A637 /* Model.swift */; };
+		59A73B082A53A59800E1A637 /* RestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A73B072A53A59800E1A637 /* RestAPI.swift */; };
 		59CB5C45CEBC4A575B7B3AE3 /* Pods_NasaWorkdayApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A53574FA317AE9F54290CB63 /* Pods_NasaWorkdayApp.framework */; };
 		9115F75E16044EF6750CBBAE /* Pods_NasaWorkdayAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9D16CFFD662721BC1F6BCD /* Pods_NasaWorkdayAppTests.framework */; };
 		B9BDF46DD68B33FB2549B127 /* Pods_NasaWorkdayApp_NasaWorkdayAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D735F6E27B2B1A06A9BE8E9C /* Pods_NasaWorkdayApp_NasaWorkdayAppUITests.framework */; };
@@ -57,6 +59,8 @@
 		59A73AEE2A53682B00E1A637 /* NasaWorkdayAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaWorkdayAppUITests.swift; sourceTree = "<group>"; };
 		59A73AF02A53682B00E1A637 /* NasaWorkdayAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaWorkdayAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		59A73B032A53881300E1A637 /* MenubarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenubarCell.swift; sourceTree = "<group>"; };
+		59A73B052A538B6F00E1A637 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		59A73B072A53A59800E1A637 /* RestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPI.swift; sourceTree = "<group>"; };
 		6FFFEEE29CBF25AEA1061159 /* Pods-NasaWorkdayAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NasaWorkdayAppTests.debug.xcconfig"; path = "Target Support Files/Pods-NasaWorkdayAppTests/Pods-NasaWorkdayAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		85467A6A4B56F6AA2E2431B9 /* Pods-NasaWorkdayAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NasaWorkdayAppTests.release.xcconfig"; path = "Target Support Files/Pods-NasaWorkdayAppTests/Pods-NasaWorkdayAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		A53574FA317AE9F54290CB63 /* Pods_NasaWorkdayApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NasaWorkdayApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,6 +178,7 @@
 		59A73AFD2A53712200E1A637 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				59A73B052A538B6F00E1A637 /* Model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 		59A73AFE2A53712900E1A637 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				59A73B072A53A59800E1A637 /* RestAPI.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -457,6 +463,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59A73B082A53A59800E1A637 /* RestAPI.swift in Sources */,
+				59A73B062A538B6F00E1A637 /* Model.swift in Sources */,
 				59A73AD22A53682900E1A637 /* SearchVC.swift in Sources */,
 				59A73ACE2A53682900E1A637 /* AppDelegate.swift in Sources */,
 				59A73B042A53881300E1A637 /* MenubarCell.swift in Sources */,
