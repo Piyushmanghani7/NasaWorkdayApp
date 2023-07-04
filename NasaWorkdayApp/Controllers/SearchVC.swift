@@ -83,6 +83,31 @@ extension SearchVC : UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MenubarCell", for: indexPath) as! MenubarCell
         
+        cell.item_title?.text = self.Searched_items[indexPath.row].data?[0].title
+        
+        // Convert the date format using DateFormatter() function.
+        let datename = (self.Searched_items[indexPath.row].data?[0].date_created)!
+        let inputDateFormatter = DateFormatter()
+        inputDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        
+
+    if let inputDate = inputDateFormatter.date(from: datename) {
+            let outputDateFormatter = DateFormatter()
+            outputDateFormatter.dateStyle = .medium
+
+
+        let outputDateString = outputDateFormatter.string(from: inputDate)
+        cell.item_date.text = outputDateString
+        }
+        
+        //Calling Download function to convert the image string format to UIImage.
+        let completelink = self.Searched_items[indexPath.row].links?[0].href
+            cell.Item_img.downloaded(from: completelink!)
+            cell.Item_img.contentMode = .scaleAspectFill
+   
+        
+        
+        
         return cell
     }
     
@@ -103,3 +128,26 @@ extension SearchVC : UITableViewDelegate, UITableViewDataSource
         
     }
 }
+
+//  Function to convert the image url into UIImage.
+extension UIImageView {
+     func downloaded(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
+        contentMode = mode
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard
+                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                let data = data, error == nil,
+                let image = UIImage(data: data)
+            else { return }
+            DispatchQueue.main.async() { [weak self] in
+                self?.image = image
+            }
+        }.resume()
+    }
+    func downloaded(from link: String, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
+        guard let url = URL(string: link) else { return }
+        downloaded(from: url, contentMode: mode)
+    }
+}
+

@@ -25,6 +25,14 @@ struct Collection: Codable
                 let location : String?
                 
             }
+            
+            let links :[Itemlinks_model]?
+            struct  Itemlinks_model  : Codable {
+                let href : String?
+                let rel : String?
+                let render : String?
+                
+            }
            
         }
         
