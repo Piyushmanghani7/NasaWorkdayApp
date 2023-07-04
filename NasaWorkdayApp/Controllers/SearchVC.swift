@@ -19,7 +19,7 @@ class SearchVC: UIViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         search_bar.delegate = self
-        Searcheddata(withSearchText: search_bar.text!)
+       // Searcheddata(withSearchText: search_bar.text!)
     }
     
     
@@ -27,6 +27,27 @@ class SearchVC: UIViewController, UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
     {
         searchBar.resignFirstResponder()
+    }
+    
+    // Calling API based on the search text
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+       
+        //Clear the array
+        self.Searched_items.removeAll()
+        
+        // Reload the table view to reflect the empty data
+        self.tableview.reloadData()
+        
+        // API request with the updated search value
+        Searcheddata(withSearchText: searchText)
+        
+        //Progressbar
+        let hud = JGProgressHUD(style: .light)
+        hud.textLabel.text = "Processing..."
+        hud.show(in: self.view)
+        hud.dismiss(animated: true)
+        
+        
     }
     
     // RESTAPI data fetching
@@ -125,6 +146,14 @@ extension SearchVC : UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
     {
         print(indexPath.row)
+       // Apply pagination condition
+        if indexPath.row == (pagecount! - 1) * self.initialpage
+        {
+            initialpage += 1
+            Searcheddata(withSearchText: search_bar.text!)
+         
+        }
+
         
     }
 }
