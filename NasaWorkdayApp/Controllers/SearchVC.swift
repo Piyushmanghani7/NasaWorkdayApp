@@ -19,7 +19,8 @@ class SearchVC: UIViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         search_bar.delegate = self
-       // Searcheddata(withSearchText: search_bar.text!)
+       
+     
     }
     
     
@@ -134,6 +135,15 @@ extension SearchVC : UITableViewDelegate, UITableViewDataSource
     
     //For navigating to other VC with table view cell data.
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let DetailedVC = self.storyboard?.instantiateViewController(withIdentifier: "DetailedVC") as! DetailedVC
+      
+        DetailedVC.Image = (self.Searched_items[indexPath.row].links?[0].href)!
+        DetailedVC.titles = (self.Searched_items[indexPath.row].data?[0].title)!
+        DetailedVC.descriptions = (self.Searched_items[indexPath.row].data?[0].description)!
+        DetailedVC.date = (self.Searched_items[indexPath.row].data?[0].date_created)!
+        DetailedVC.location = (self.Searched_items[indexPath.row].data?[0].location) ?? "USA"
+        self.navigationController?.pushViewController(DetailedVC, animated: false)
         
     }
     
