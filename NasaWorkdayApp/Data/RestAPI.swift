@@ -24,7 +24,10 @@ func SearchFetch(SearchName: String, Page: Int, completion: @escaping([Collectio
         
         let urlStr = RestAPI.base_api + "/search"
     
+    //Parameter array to pass in API
         let parameters: [String: Any] = ["q": SearchName, "media_type": "image", "page" : Page]
+    
+    //API request using alamofire library.
     AF.request(urlStr, method: .get, parameters: parameters, encoding: URLEncoding.default).responseJSON{ response in
         
         guard response.error == nil else {return}
@@ -39,7 +42,10 @@ func SearchFetch(SearchName: String, Page: Int, completion: @escaping([Collectio
                 
                 let decoder = JSONDecoder()
                 let serverData = try decoder.decode(Collection.self, from: data)
+                
+                //Check the data
                 print("serverData",serverData)
+                
                 completion(serverData.collection?.items, nil )
                 
                 

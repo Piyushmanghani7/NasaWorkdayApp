@@ -29,14 +29,14 @@
                                 </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uOG-x7-cGM">
-                                <rect key="frame" x="16" y="147" width="361" height="715"/>
+                                <rect key="frame" x="16" y="147" width="361" height="671"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="715" id="FHH-AY-hPf"/>
+                                    <constraint firstAttribute="height" constant="671" id="10N-bD-BHX"/>
                                     <constraint firstAttribute="width" constant="361" id="Zpj-yQ-PXO"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MenubarCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MenubarCell" rowHeight="161" id="ahk-ck-puN" customClass="MenubarCell" customModule="NasaWorkdayApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MenubarCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MenubarCell" rowHeight="161" id="ahk-ck-puN" customClass="MenubarCell" customModule="NasaWorkdayApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="361" height="161"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ahk-ck-puN" id="tAW-J0-cZc">
@@ -56,7 +56,7 @@
                                                         <constraint firstAttribute="width" constant="210" id="6UA-CR-zEY"/>
                                                         <constraint firstAttribute="height" constant="62" id="kf9-3A-OUS"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -116,7 +116,7 @@
             </objects>
             <point key="canvasLocation" x="440.45801526717554" y="11.971830985915494"/>
         </scene>
-        <!--DetailedVC-->
+        <!--DETAILED VIEW-->
         <scene sceneID="j7o-RJ-Ssz">
             <objects>
                 <viewController storyboardIdentifier="DetailedVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uvU-k3-6Rt" customClass="DetailedVC" customModule="NasaWorkdayApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -147,18 +147,18 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47A-6h-Je5">
-                                                <rect key="frame" x="69" y="1" width="284" height="38"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47A-6h-Je5">
+                                                <rect key="frame" x="69" y="10" width="284" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="284" id="8kY-2t-b6z"/>
-                                                    <constraint firstAttribute="height" constant="38" id="Vqr-fg-Woc"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="Vqr-fg-Woc"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DESCRIPTION:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBK-RQ-R17">
-                                                <rect key="frame" x="8" y="54" width="116" height="21"/>
+                                                <rect key="frame" x="8" y="46" width="116" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="116" id="4wP-9i-SVe"/>
                                                     <constraint firstAttribute="height" constant="21" id="sOv-aA-Xga"/>
@@ -168,7 +168,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="em7-4y-8jB">
-                                                <rect key="frame" x="8" y="83" width="345" height="21"/>
+                                                <rect key="frame" x="8" y="75" width="345" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="A0r-bY-WAu"/>
                                                     <constraint firstAttribute="width" constant="345" id="o05-e7-SMv"/>
@@ -178,7 +178,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7r-h1-1cV">
-                                                <rect key="frame" x="8" y="155" width="345" height="21"/>
+                                                <rect key="frame" x="8" y="147" width="345" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="345" id="3gU-dJ-fFo"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="O5u-pl-EQu"/>
@@ -188,7 +188,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CREATED ON:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8Q-xN-yZq">
-                                                <rect key="frame" x="8" y="126" width="110" height="21"/>
+                                                <rect key="frame" x="8" y="118" width="110" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="110" id="JCc-q0-GxP"/>
                                                     <constraint firstAttribute="height" constant="21" id="pLo-9C-odj"/>
@@ -198,7 +198,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOCATION:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GlQ-Y6-GeR">
-                                                <rect key="frame" x="8" y="196" width="110" height="21"/>
+                                                <rect key="frame" x="8" y="188" width="110" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="110" id="VE2-Ad-s9z"/>
                                                     <constraint firstAttribute="height" constant="21" id="mcq-NZ-kIU"/>
@@ -208,7 +208,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0WA-ic-Enh">
-                                                <rect key="frame" x="8" y="225" width="345" height="21"/>
+                                                <rect key="frame" x="8" y="217" width="345" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="B0D-cb-ckY"/>
                                                     <constraint firstAttribute="width" constant="345" id="kbi-2T-ryK"/>
@@ -233,7 +233,7 @@
                                             <constraint firstItem="0WA-ic-Enh" firstAttribute="top" secondItem="GlQ-Y6-GeR" secondAttribute="bottom" constant="8" symbolic="YES" id="sJz-4T-VKX"/>
                                             <constraint firstItem="Z7r-h1-1cV" firstAttribute="leading" secondItem="XcN-aO-rRz" secondAttribute="leading" constant="8" id="tNg-yM-oNh"/>
                                             <constraint firstItem="em7-4y-8jB" firstAttribute="leading" secondItem="XcN-aO-rRz" secondAttribute="leading" constant="8" id="w6m-Un-WYC"/>
-                                            <constraint firstItem="47A-6h-Je5" firstAttribute="top" secondItem="XcN-aO-rRz" secondAttribute="top" constant="1" id="yKK-3w-c0B"/>
+                                            <constraint firstItem="47A-6h-Je5" firstAttribute="top" secondItem="XcN-aO-rRz" secondAttribute="top" constant="10" id="yKK-3w-c0B"/>
                                             <constraint firstItem="CBK-RQ-R17" firstAttribute="leading" secondItem="XcN-aO-rRz" secondAttribute="leading" constant="8" id="yfr-M2-Te0"/>
                                             <constraint firstItem="GlQ-Y6-GeR" firstAttribute="leading" secondItem="XcN-aO-rRz" secondAttribute="leading" constant="8" id="yi1-zf-tFn"/>
                                             <constraint firstItem="buH-Kr-6yQ" firstAttribute="leading" secondItem="XcN-aO-rRz" secondAttribute="leading" constant="8" id="ytb-ZA-fDL"/>
@@ -261,6 +261,7 @@
                             <constraint firstItem="Itg-mD-0R2" firstAttribute="trailing" secondItem="YSg-5x-WFo" secondAttribute="trailing" constant="16" id="yOD-vX-uMn"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="DETAILED VIEW" id="mMf-Uy-Y4R"/>
                     <size key="freeformSize" width="393" height="852"/>
                     <connections>
                         <outlet property="date_lbl" destination="Z7r-h1-1cV" id="GRI-Ye-mZp"/>

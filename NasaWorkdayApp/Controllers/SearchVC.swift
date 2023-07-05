@@ -9,20 +9,24 @@ import UIKit
 import JGProgressHUD
 class SearchVC: UIViewController, UISearchBarDelegate {
     
+    
+    
     @IBOutlet weak var search_bar: UISearchBar!
     
     @IBOutlet weak var tableview: UITableView!
     
     var pagecount : Int? = 0
+    
     private var Searched_items = [Collection.collection_model.Items_model]()
+    
     var initialpage : Int = 1
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         search_bar.delegate = self
-       
-     
+        
     }
-    
     
     // calling when search button click on keyboard to hide keyboard.
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
@@ -30,9 +34,9 @@ class SearchVC: UIViewController, UISearchBarDelegate {
         searchBar.resignFirstResponder()
     }
     
-    // Calling API based on the search text
+    //Calling API based on the search text
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-       
+        
         //Clear the array
         self.Searched_items.removeAll()
         
@@ -83,7 +87,7 @@ class SearchVC: UIViewController, UISearchBarDelegate {
                 
                 // update the page count value for pagination condition.
                 self.pagecount = item_updates?.count
-                print(self.pagecount!)
+                print("pagecount",self.pagecount!)
                 
             }
             
@@ -112,21 +116,21 @@ extension SearchVC : UITableViewDelegate, UITableViewDataSource
         let inputDateFormatter = DateFormatter()
         inputDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
         
-
-    if let inputDate = inputDateFormatter.date(from: datename) {
+        
+        if let inputDate = inputDateFormatter.date(from: datename) {
             let outputDateFormatter = DateFormatter()
             outputDateFormatter.dateStyle = .medium
-
-
-        let outputDateString = outputDateFormatter.string(from: inputDate)
-        cell.item_date.text = outputDateString
+            
+            
+            let outputDateString = outputDateFormatter.string(from: inputDate)
+            cell.item_date.text = outputDateString
         }
         
         //Calling Download function to convert the image string format to UIImage.
         let completelink = self.Searched_items[indexPath.row].links?[0].href
-            cell.Item_img.downloaded(from: completelink!)
-            cell.Item_img.contentMode = .scaleAspectFill
-   
+        cell.Item_img.downloaded(from: completelink!)
+        cell.Item_img.contentMode = .scaleAspectFill
+        
         
         
         
@@ -137,7 +141,7 @@ extension SearchVC : UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let DetailedVC = self.storyboard?.instantiateViewController(withIdentifier: "DetailedVC") as! DetailedVC
-      
+        
         DetailedVC.Image = (self.Searched_items[indexPath.row].links?[0].href)!
         DetailedVC.titles = (self.Searched_items[indexPath.row].data?[0].title)!
         DetailedVC.descriptions = (self.Searched_items[indexPath.row].data?[0].description)!
@@ -156,21 +160,21 @@ extension SearchVC : UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
     {
         print(indexPath.row)
-       // Apply pagination condition
+        // Apply pagination condition
         if indexPath.row == (pagecount! - 1) * self.initialpage
         {
             initialpage += 1
             Searcheddata(withSearchText: search_bar.text!)
-         
+            
         }
-
+        
         
     }
 }
 
 //  Function to convert the image url into UIImage.
 extension UIImageView {
-     func downloaded(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
+    func downloaded(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
         contentMode = mode
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard
